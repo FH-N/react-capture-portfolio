@@ -39,7 +39,9 @@ button{
     }
 
     h4{
+        color: white;
         font-weight: bold;
+        font-size: 2rem;
     }
 
     a{
