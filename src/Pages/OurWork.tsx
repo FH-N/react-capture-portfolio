@@ -1,9 +1,60 @@
+//import images
+import athlete from "../img/athlete.jpg"
+import racer from "../img/racer.jpg"
+import goodtimes from "../img/goodtimes.jpg"
+//import 
+import styled from "styled-components"
+import {Link} from "react-router-dom"
+
 const OurWork = () => {
   return (
-    <div>
-      <h1>Our work</h1>
-    </div>
+    <Work>
+      <Movie>
+        <h2>The Athlete</h2>
+        <div className="line"></div>
+        <Link to="#">
+        <img src={athlete} alt="athlete" />
+        </Link>
+      </Movie>
+      <Movie>
+        <h2>The Racer</h2>
+        <div className="line"></div>
+        <Link to="#">
+        <img src={racer} alt="racer" />
+        </Link>
+      </Movie>
+      <Movie>
+        <h2>Good Times</h2>
+        <div className="line"></div>
+        <Link to="#">
+        <img src={goodtimes} alt="Good times" />
+        </Link>
+      </Movie>
+    </Work>
   );
 };
+
+const Work = styled.div`
+min-height: 100vh;
+overflow: hidden;
+padding: 5rem 10rem;
+h2{
+  padding: 1rem 0rem;
+}
+
+img{
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+`
+const Movie = styled.div`
+padding-botom: 10rem:
+.line{
+  height: 0.5rem;
+  background: #cccccc;
+  margin-bottom: 3rem;
+}
+`
 
 export default OurWork;
