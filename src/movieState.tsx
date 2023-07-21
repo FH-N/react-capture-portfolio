@@ -6,6 +6,18 @@ import athlete2 from "./img/athlete2.jpg";
 import goodtimes2 from "./img/goodtimes2.jpg";
 import racer2 from "./img/racer2.jpg";
 
+export interface MovieStateProps {
+  title: string;
+  mainImg: string;
+  secondaryImg: string;
+  url: string;
+  awards: Award[];
+}
+
+export interface Award {
+  title: string;
+  description: string;
+}
 
 export const MovieState = () => {
   return [
