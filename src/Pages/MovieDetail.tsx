@@ -22,6 +22,7 @@ const MovieDetail = () => {
     //const [movies, setMovies] = useState<MovieStateProps>({MovieState});
     const [movies, setMovies] = useState(MovieState);
     const [movie, setMovie] = useState(null);
+    
 //useEffect
 useEffect(() => {
     const currentMovie = movies.filter((stateMovie) => stateMovie.url === url)
