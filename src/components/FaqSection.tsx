@@ -1,5 +1,6 @@
 import { Layout } from "../styles";
 import styled from "styled-components";
+import Toggle from "./toggle";
 
 const FaqSection = () => {
   return (
@@ -8,6 +9,7 @@ const FaqSection = () => {
         {" "}
         Any Questions <span>FAQ</span>
       </h2>
+      <Toggle>
       <div className="questions">
         <h4>How do I start?</h4>
         <div className="answer">
@@ -19,6 +21,8 @@ const FaqSection = () => {
         </div>
         <div className="faq-line"></div>
       </div>
+      </Toggle>
+      <Toggle>
       <div className="questions">
         <h4>Daily Schedule?</h4>
         <div className="answer">
@@ -30,6 +34,8 @@ const FaqSection = () => {
         </div>
         <div className="faq-line"></div>
       </div>
+      </Toggle>
+      <Toggle>
       <div className="questions">
         <h4>Different Payment Methods</h4>
         <div className="answer">
@@ -41,6 +47,8 @@ const FaqSection = () => {
         </div>
         <div className="faq-line"></div>
       </div>
+      </Toggle>
+      <Toggle>
       <div className="questions">
         <h4>what products do you offer?</h4>
         <div className="answer">
@@ -52,6 +60,7 @@ const FaqSection = () => {
         </div>
         <div className="faq-line"></div>
       </div>
+      </Toggle>
     </Faq>
   );
 };
@@ -73,7 +82,7 @@ const Faq = styled(Layout)`
     width: 100%;
   }
 
-  .question {
+  .questions {
     padding: 3rem 0rem;
     cursor: pointer;
   }
