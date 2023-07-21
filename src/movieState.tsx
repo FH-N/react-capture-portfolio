@@ -62,17 +62,17 @@ export const MovieState = () => {
       secondaryImg: racer2,
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "Nepotism Sport.",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "F1 drivers need a psych eval.",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "It’s okay lmao.",
+          title: "Cars go brrr.",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
