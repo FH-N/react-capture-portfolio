@@ -11,10 +11,10 @@ export interface MovieStateProps {
   mainImg: string;
   secondaryImg: string;
   url: string;
-  awards: Award[];
+  awards: AwardProp[];
 }
 
-export interface Award {
+export interface AwardProp {
   title: string;
   description: string;
 }

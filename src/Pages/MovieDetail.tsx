@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Award, MovieState, MovieStateProps } from "../movieState";
+import { AwardProp, MovieState, MovieStateProps } from "../movieState";
+//animations 
+import {motion} from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -26,7 +29,7 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details variants={pageAnimation} initial="hidden" animate="show" exit="exit">
           <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -49,7 +52,7 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const Headline = styled.div`
@@ -101,7 +104,7 @@ const ImageDisplay = styled.div`
 `;
 
 //award component
-const Award: React.FC<Award> = ({ title, description }) => {
+const Award: React.FC<AwardProp> = ({ title, description }) => {
   return (
     <AwardStyle>
       <h3>{title}</h3>
