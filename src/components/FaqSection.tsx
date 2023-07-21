@@ -1,6 +1,7 @@
 import { Layout } from "../styles";
 import styled from "styled-components";
 import Toggle from "./toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   return (
@@ -9,58 +10,47 @@ const FaqSection = () => {
         {" "}
         Any Questions <span>FAQ</span>
       </h2>
-      <Toggle>
-      <div className="questions">
-        <h4>How do I start?</h4>
+      <AnimateSharedLayout>
+      <Toggle title="How Do I Start?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-        </div>
-        <div className="faq-line"></div>
       </div>
       </Toggle>
-      <Toggle>
-      <div className="questions">
-        <h4>Daily Schedule?</h4>
+
+      <Toggle  title="Daily Schedule?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-        </div>
-        <div className="faq-line"></div>
       </div>
       </Toggle>
-      <Toggle>
-      <div className="questions">
-        <h4>Different Payment Methods</h4>
+
+      <Toggle title="Different Payment Methods">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-        </div>
-        <div className="faq-line"></div>
       </div>
       </Toggle>
-      <Toggle>
-      <div className="questions">
-        <h4>what products do you offer?</h4>
+
+      <Toggle title="what products do you offer?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-        </div>
-        <div className="faq-line"></div>
       </div>
       </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
@@ -82,7 +72,7 @@ const Faq = styled(Layout)`
     width: 100%;
   }
 
-  .questions {
+  .question {
     padding: 3rem 0rem;
     cursor: pointer;
   }
