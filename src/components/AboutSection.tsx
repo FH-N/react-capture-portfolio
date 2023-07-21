@@ -2,6 +2,7 @@ import home1 from "../img/home1.jpg";
 import { Layout, Description, Image, Hide } from "../styles";
 //framer motion 
 import {motion} from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
 
 
 const AboutSection = () => {
@@ -12,25 +13,25 @@ const AboutSection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals that make things come to life.
-        </p>
-        <button>Contact us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact us</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt="girl holding camera" />
+        <motion.img variants={photoAnim} src={home1} alt="girl holding camera" />
       </Image>
     </Layout>
   );
