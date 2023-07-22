@@ -1,16 +1,20 @@
 import { Layout } from "../styles";
 import styled from "styled-components";
 import Toggle from "./toggle";
-import { AnimateSharedLayout } from "framer-motion";
+//import { AnimateSharedLayout } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
 
 const FaqSection = () => {
+// const [element, controls] = useScroll();
   return (
-    <Faq>
+    //in faq - variants={scrollReveal} ref={element} animate={controls} initial="hidden"
+    <Faq >
       <h2>
         {" "}
         Any Questions <span>FAQ</span>
       </h2>
-      <AnimateSharedLayout>
+      
       <Toggle title="How Do I Start?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
@@ -41,7 +45,7 @@ const FaqSection = () => {
       </div>
       </Toggle>
 
-      <Toggle title="what products do you offer?">
+      <Toggle title="What products do you offer?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -50,7 +54,7 @@ const FaqSection = () => {
           </p>
       </div>
       </Toggle>
-      </AnimateSharedLayout>
+      
     </Faq>
   );
 };
@@ -86,3 +90,5 @@ const Faq = styled(Layout)`
 `;
 
 export default FaqSection;
+
+//{<AnimateSharedLayout>}
