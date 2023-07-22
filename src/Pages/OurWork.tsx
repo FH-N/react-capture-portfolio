@@ -5,11 +5,17 @@ import goodtimes from "../img/goodtimes.jpg"
 //import 
 import styled from "styled-components"
 import {Link} from "react-router-dom"
+import ScrollTop from "../components/scrollTop"
 //animations 
 import {motion} from "framer-motion";
 import { sliderContainer, pageAnimation, fade, photoAnim, lineAnim, slider } from "../animation";
+// import { useScroll } from "../components/useScroll"
+
 
 const OurWork = () => {
+  //const [element, controls] = useScroll();
+ // const [element2, controls2] = useScroll();
+  
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit" style={{background: "#fff"}}>
       <motion.div variants={sliderContainer}>
@@ -27,7 +33,8 @@ const OurWork = () => {
         </Hide>
         </Link>
       </Movie>
-      <Movie>
+      <Movie >
+      {/*ref={element} variants={fade} animate={controls} initial="hidden"*/}
         <h2>The Racer</h2>
         <div className="line"></div>
         <Link to="/work/the-racer">
@@ -41,6 +48,7 @@ const OurWork = () => {
         <img src={goodtimes} alt="Good times" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
@@ -59,7 +67,7 @@ img{
   object-fit: cover;
 }
 `
-const Movie = styled.div`
+const Movie = styled(motion.div)`
 padding-botom: 10rem;
 .line{
   height: 0.5rem;
