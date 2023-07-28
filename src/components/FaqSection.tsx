@@ -6,15 +6,15 @@ import { useScroll } from "./useScroll";
 import { scrollReveal } from "../animation";
 
 const FaqSection = () => {
-// const [element, controls] = useScroll();
+  //  const [element, controls] = useScroll();
   return (
     //in faq - variants={scrollReveal} ref={element} animate={controls} initial="hidden"
-    <Faq >
+    <Faq>
       <h2>
         {" "}
         Any Questions <span>FAQ</span>
       </h2>
-      
+
       <Toggle title="How Do I Start?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
@@ -22,17 +22,17 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-      </div>
+        </div>
       </Toggle>
 
-      <Toggle  title="Daily Schedule?">
+      <Toggle title="Daily Schedule?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-      </div>
+        </div>
       </Toggle>
 
       <Toggle title="Different Payment Methods">
@@ -42,7 +42,7 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-      </div>
+        </div>
       </Toggle>
 
       <Toggle title="What products do you offer?">
@@ -52,9 +52,8 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
             consequatur?
           </p>
-      </div>
+        </div>
       </Toggle>
-      
     </Faq>
   );
 };

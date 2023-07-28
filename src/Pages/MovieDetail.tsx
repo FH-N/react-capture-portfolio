@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { AwardProp, MovieState, MovieStateProps } from "../movieState";
-//animations 
-import {motion} from "framer-motion";
+//animations
+import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
@@ -29,7 +29,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -77,10 +82,10 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 1500px){
+  @media (max-width: 1500px) {
     display: block;
     margin: 2rem 2rem;
-}
+  }
 `;
 
 const AwardStyle = styled.div`
