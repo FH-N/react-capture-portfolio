@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Toggle = ({ children, title }) => {
+interface toggleTypes {
+  children: React.ReactNode;
+  title: string;
+}
+
+const Toggle = ({ children, title }: toggleTypes) => {
   const [toggle, setToggle] = useState(false);
   return (
     <motion.div layout className="question" onClick={() => setToggle(!toggle)}>

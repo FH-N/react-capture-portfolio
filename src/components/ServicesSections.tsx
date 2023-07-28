@@ -8,8 +8,8 @@ import home2 from "../img/home2.jpg";
 import styled from "styled-components";
 import { Layout, Description, Image } from "../styles";
 //animation
-import { scrollReveal } from "../animation";
-import { useScroll } from "./useScroll";
+/*import { scrollReveal } from "../animation";
+import { useScroll } from "./useScroll";*/
 
 const ServicesSection = () => {
   // const [element, controls] = useScroll();
